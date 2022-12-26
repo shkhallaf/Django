@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %} {% for ele in users %}
+<h1>{{ele.name}}</h1>
+{% endfor%}
+<a href="{% url 'pagesabout'%}">About</a>
+
+{% endblock %} {% comment %}
+<h1 style="color: red">hello from pages / index.html</h1>
+{% endcomment %} {% comment %}
+<h1>{{user|capfirst}}</h1>
+{% endcomment %} {% comment %}
+<h1>{{user|default:"User Not Found"|slice:":5"}}</h1>
+{% endcomment %} {% comment %}
+<h1>{{user|capfirst|add:" is instructor in iti"}}</h1>
+{% endcomment %} {% comment %}
+<h1>{{user|cut:"@"|length}}</h1>
+<h1>{{user|length}}</h1>
+<h1>{{salary|filesizeformat}}</h1>
+{% endcomment %} {% comment %} {% if user == "shimaa" %}
+<h1 style="color: green">{{user}}</h1>
+{% elif user == "mohammed" %}
+<h1 style="color: yellow">{{user}}</h1>
+{% else %}
+<h1 style="color: red">{{user}}</h1>
+{% endif %} {% endcomment %} {% comment %} {% for ele in users %}
+<h1>{{ele.name}}</h1>
+{% endfor%} {% endcomment %}

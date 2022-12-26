@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+<style>
+  table,
+  tr,
+  td,
+  th {
+    border: 2px solid green;
+  }
+</style>
+<h1>Products</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>price</th>
+    <th>Model</th>
+    <th>image</th>
+  </tr>
+  {{cars}} {% comment %} {% for ele in cars %}
+  <tr>
+    <td>{{ele.name}}</td>
+    <td>{{ele.price}}</td>
+    <td>{{ele.model}}</td>
+    <td>{{ele.image}}</td>
+  </tr>
+  {% endfor %} {% endcomment %}
+</table>
+{% comment %}
+<h1>{{cars}}</h1>
+{% endcomment %} {% endblock %}
